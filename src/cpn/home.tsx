@@ -1,22 +1,123 @@
 import React from 'react';
 import '../App.scss';
 
+let tieuDe = "Find out how we can";
+const body1 = [
+  {
+    url: "../img/undraw_exploring_1l7f 1.png",
+    name: "Promoting your territory towards foreign tourists",
+    noiDung: "EasyCamper wants to promote the excellence of Italian food and wine, art, culture and the economy.",
+    discover: "Discover the places linked to your area that you can link to your structure"
+  },
+  {
+    url: "../img/undraw_exploring_1l7f 1.png",
+    name: "Promoting your territory towards foreign tourists",
+    noiDung: "EasyCamper wants to promote the excellence of Italian food and wine, art, culture and the economy.",
+    discover: "Discover the places linked to your area that you can link to your structure"
+  },
+  {
+    url: "../img/undraw_exploring_1l7f 1.png",
+    name: "Promoting your territory towards foreign tourists",
+    noiDung: "EasyCamper wants to promote the excellence of Italian food and wine, art, culture and the economy.",
+    discover: "Discover the places linked to your area that you can link to your structure"
+  }
+]
+
+const body2 = [
+  {
+    url: "../img/icon2.png",
+    choose: "Choose the type of stop",
+    sel: "Select the type of stopover you are ordering from Equipped Area, Camping and Agricamping",
+    show: "Show me more"
+  },
+  {
+    url: "../img/icon2.png",
+    choose: "Choose the type of stop",
+    sel: "Select the type of stopover you are ordering from Equipped Area, Camping and Agricamping",
+    show: "Show me more"
+  },
+  {
+    url: "../img/icon2.png",
+    choose: "Choose the type of stop",
+    sel: "Select the type of stopover you are ordering from Equipped Area, Camping and Agricamping",
+    show: "Show me more"
+  },
+  {
+    url: "../img/icon2.png",
+    choose: "Choose the type of stop",
+    sel: "Select the type of stopover you are ordering from Equipped Area, Camping and Agricamping",
+    show: "Show me more"
+  }
+]
+
+const body3 = [
+  {
+    url: "",
+    title: "Lucciano",
+    describe: "Roma",
+    view: "View the Site"
+  },
+  {
+    url: "",
+    title: "Lucciano",
+    describe: "Roma",
+    view: "View the Site"
+  },
+  {
+    url: "",
+    title: "Lucciano",
+    describe: "Roma",
+    view: "View the Site"
+  }
+]
+
+const body4 = [
+  {
+    url: "../img/XMLID.png",
+    title: "Convenience and Transparency",
+    description: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of 5"
+  },
+  {
+    url: "../img/XMLID.png",
+    title: "Convenience and Transparency",
+    description: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of 5"
+  },
+  {
+    url: "../img/XMLID.png",
+    title: "Convenience and Transparency",
+    description: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of 5"
+  }
+]
+
+const Discover = [
+  "Where to shop",
+  "Tour Guided",
+  "Our Tours",
+  "About Us"
+]
+
+const Become = [
+  "Join your Pairing",
+  "Offer your Service",
+  "Are you a guide?"
+]
+
+const Assistance = [
+  "Support Center",
+  "FAQs",
+  "Cancallation Options",
+  "Reliablity and Sequrity"
+]
+
+const footer = [
+  "About",
+  "Site Map",
+  "Terms",
+  "Privacy Policy",
+  "Teams"
+]
+
 function Home() {
-
-  // constructor(props) {
-
-  //   super(props);
-
-  //   this.state = {
-  //     items: [
-  //       {
-  //         title:  "Promoting your territory towards foreign tourists",
-  //         content: "EasyCamper wants to promote the excellence of Italian food and wine, art, culture and the economy."
-  //       }
-  //     ]
-  //   }
-
-  // }
 
   return (
     <div className="App">
@@ -32,7 +133,7 @@ function Home() {
         </div>
           <div className="popup">
             <div className="title">
-               Find out how we can <span className ="highlight">save your time</span> in Backpacking in Europe
+               {tieuDe}<span className ="highlight">save your time</span> in Backpacking in Europe
             </div>
             <div className="content">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac amet id eget scelerisque amet etiam in sit commodo. Pretium ut duis orci pulvinar pretium id consectetur.</p>
@@ -48,32 +149,17 @@ function Home() {
 
       <body>
           <div className="body1">
-            <div className="body1_1" >
-              <img src="../img/undraw_exploring_1l7f 1.png" alt="" className="hinh1"/>
-              <div className="body1_content1">
-                <h1>Promoting your territory towards foreign tourists</h1>
-                <p>EasyCamper wants to promote the excellence of Italian food and wine, art, culture and the economy.</p>
-                <b>Discover the places linked to your area that you can link to your structure</b>
-              </div>
-            </div>
 
-            <div className="body1_1">
-              <img src="../img/undraw_tourist_map_re_293e 1.png" alt="" className="hinh1"/>
-              <div className="body1_content1">
-                <h1>Promoting your territory towards foreign tourists</h1>
-                <p>EasyCamper wants to promote the excellence of Italian food and wine, art, culture and the economy.</p>
-                <b>Discover the places linked to your area that you can link to your structure</b>
+            { body1.map((item) =>{
+              return <div className="body1_1">
+                <img src={item.url} alt="" className="hinh1"/>
+                <div className="body1_content1">
+                  <h1>{item.name}</h1>
+                  <p>{item.noiDung}</p>
+                  <b>{item.discover}</b>
+                </div>
               </div>
-            </div>
-
-            <div className="body1_1">
-              <img src="../img/undraw_Destination_re_sr74 1.png" alt="" className="hinh1"/>
-              <div className="body1_content1">
-                <h1>Promoting your territory towards foreign tourists</h1>
-                <p>EasyCamper wants to promote the excellence of Italian food and wine, art, culture and the economy.</p>
-                <b>Discover the places linked to your area that you can link to your structure</b>
-              </div>
-            </div>
+            })}
 
           </div>
 
@@ -81,33 +167,16 @@ function Home() {
             <h1>Making your facility known is our priority</h1>
 
             <div className="body2_content">
-              <div className="body2_content1">
-                <img src="../img/icon2.png" alt="" className="icon1"/>
-                <b className="b_choose">Choose the type of stop</b>
-                <p>Select the type of stopover you are ordering from Equipped Area, Camping and Agricamping</p>
-                <b className="b_show">Show me more</b>
-              </div>
-              
-              <div className="body2_content1">
-                <img src="../img/icon3.png" alt="" className="icon1"/>
-                <b className="b_choose">Choose the type of stop</b>
-                <p>Select the type of stopover you are ordering from Equipped Area, Camping and Agricamping</p>
-                <b className="b_show">Show me more</b>
-              </div>
 
-              <div className="body2_content1">
-                <img src="../img/icon1.png" alt="" className="icon1"/>
-                <b className="b_choose">Choose the type of stop</b>
-                <p>Select the type of stopover you are ordering from Equipped Area, Camping and Agricamping</p>
-                <b className="b_show">Show me more</b>
-              </div>
+              {body2.map((body2_1)=> {
+                return <div className="body2_content1">
+                  <img src={body2_1.url} alt="" className="icon1"/>
+                  <b className="b_choose">{body2_1.choose}</b>
+                  <p>{body2_1.sel}</p>
+                  <b className="b_show">{body2_1.show}</b>
+                </div>
+              })}
 
-              <div className="body2_content1">
-                <img src="../img/icon1.png" alt="" className="icon1"/>
-                <b className="b_choose">Choose the type of stop</b>
-                <p>Select the type of stopover you are ordering from Equipped Area, Camping and Agricamping</p>
-                <b className="b_show">Show me more</b>
-              </div>
             </div>
 
           </div>
@@ -124,51 +193,30 @@ function Home() {
             </div>
 
             <div className="body3_2">
-                <div className="body3_content">
-                  <img src="" alt="" className="sp1"/>
-                  <p className="title">Lucciano</p>
-                  <p className="describe">Rome</p>
-                  <p className="view">View the Site</p>
-                </div>
+               
+                {body3.map((body3_2)=> {
+                  return <div className="body3_content">
+                    <img src={body3_2.url} alt="" className="sp1"/>
+                    <p className="title">{body3_2.title}</p>
+                    <p className="describe">{body3_2.describe}</p>
+                    <p className="view">{body3_2.view}</p>
+                  </div>
 
-                <div className="body3_content">
-                  <img src="" alt="" className="sp1"/>
-                  <p className="title">Lucciano</p>
-                  <p className="describe">Rome</p>
-                  <p className="view">View the Site</p>
-                </div>
+                })}
 
-                <div className="body3_content">
-                  <img src="" alt="" className="sp1"/>
-                  <p className="title">Lucciano</p>
-                  <p className="describe">Rome</p>
-                  <p className="view">View the Site</p>
-                </div>
             </div>
           </div>
           <div className="body4">
             <h1>Our Advantages</h1>
             <div className="body4_content">
-              <div className="body4_content1">
-                <img src="../img/XMLID.png" alt="" className="iconXMLID"/>
-                <b className="b_choose">Convenience and Transparency</b>
-                <p className="body4_describe">You don’t have to find out later or only after camenierk and trarsparent Easyamper
-                 ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of 5</p>
-              </div>
 
-              <div className="body4_content1">
-                <img src="../img/XMLID.png" alt="" className="iconXMLID"/>
-                <b className="b_choose">Convenience and Transparency</b>
-                <p className="body4_describe">You don’t have to find out later or only after camenierk and trarsparent Easyamper
-                 ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of 5</p>
-              </div>
-
-              <div className="body4_content1">
-                <img src="../img/XMLID.png" alt="" className="iconXMLID"/>
-                <b className="b_choose">Convenience and Transparency</b>
-                <p className="body4_describe">You don’t have to find out later or only after camenierk and trarsparent Easyamper
-                 ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of 5</p>
-              </div>
+              {body4.map((body4_1)=> {
+                return  <div className="body4_content1">
+                  <img src={body4_1.url} alt="" className="iconXMLID"/>
+                  <b className="b_choose">{body4_1.title}</b>
+                  <p className="body4_describe">{body4_1.description}</p>
+                </div>
+              })}
 
             </div>
           </div>
@@ -185,29 +233,27 @@ function Home() {
               <div className="content_right">
                 <b>Discover the Network</b>
                 <div className="content">
-                  <p>Where to shop</p>
-                  <p>Tour Guided</p>
-                  <p>Our Tours</p>
-                  <p>About Us</p>
+                 {Discover.map((dis)=>{
+                   return <p>{dis}</p>
+                 })}
                 </div>
               </div>
 
               <div className="content_right">
                 <b>Become a Manager</b>
                 <div className="content">
-                  <p>Join your Pairing</p>
-                  <p>Offer your Service</p>
-                  <p>Are you a guide?</p>
+                  {Become.map((bec)=>{
+                    return <p>{bec}</p>
+                  })}
                 </div>
               </div>
 
               <div className="content_right">
                 <b>Assistance</b>
                 <div className="content">
-                  <p>Support Center</p>
-                  <p>FAQs</p>
-                  <p>Cancallation Options</p>
-                  <p>Reliablity and Sequrity</p>
+                  {Assistance.map((ass)=>{
+                    return <p>{ass}</p>
+                  })}
                 </div>
               </div>
             </div>
@@ -219,11 +265,9 @@ function Home() {
             </div>
 
             <div className="footer2_right">
-              <p>About</p>
-              <p>Site Map</p>
-              <p>Terms</p>
-              <p>Privacy Policy</p>
-              <p>Teams</p>
+              {footer.map((foo)=> {
+                return <p>{foo}</p>
+              })}
             </div>
           </div>
       </footer>
